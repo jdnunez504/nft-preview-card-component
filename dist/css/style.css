@@ -1,0 +1,269 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/*
+$primary-color: #272727;
+$accent-color: #ff652f;
+$text-color: #fff;
+$font-weights: (
+    "regular": 400,
+    "medium": 500,
+    "bold": 700
+);
+$mobile: 800px;
+*/
+/*
+@function weight($weight-name) {
+    @return map-get($font-weights, $weight-name);
+}
+
+@mixin flexCenter($direction) {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: $direction;
+}
+
+@mixin theme($light-theme: true) {
+    @if $light-theme {
+        background: lighten($primary-color, 100%);
+        color: darken($text-color, 100%);
+    }
+}
+
+@mixin mobile {
+    @media (max-width: $mobile) {
+        @content;
+    }
+}
+
+body {
+    background: $primary-color;
+    color: $text-color;
+}
+
+.main {
+    @include flexCenter(row);
+    width: 80% - 40%;
+    margin: 0 auto;
+
+    __paragraph1 {
+        font-weight: weight(bold);
+        &:hover {
+            color: pink;
+        }
+    }
+
+    __paragraph2 {
+        @extend .main__paragraph1;
+        &:hover {
+            color: $accent-color;
+        }
+    }
+
+    @include mobile {
+        flex-direction: column;
+    }
+}
+
+.light {
+    @include theme($light-theme: true);
+}
+
+@import 'config';
+@import 'home';
+@import 'menu';
+@import 'about';
+@import 'projects';
+@import 'contact';
+@import 'responsive';
+
+body {
+    background: $primary-color;
+    color: set-text-color($primary-color);
+    height: 100vh;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1;
+}
+
+h1, h2, h3 {
+    font-weight: 400;
+}
+
+a {
+    color: set-text-color($primary-color);
+    text-decoration: none;
+}
+
+.text-secondary {
+    color: $secondary-color;
+}
+
+header {
+    position: fixed;
+    z-index: 2;
+    width: 100%;
+    padding: 1rem;
+}
+
+main {
+    height: 100%;
+    width: 100%;
+    .social-icons {
+        position: fixed;
+        bottom: 1rem;
+        left: 1rem;
+        a {
+            padding: 0.4rem;
+            @include transition-ease;
+            &:hover {
+                color: $secondary-color;
+            }
+        }
+    }
+}
+
+footer {
+    font-size: 1rem;
+    position: fixed;
+    bottom: 0.4rem;
+    right: 1rem;
+    text-align: right;
+    padding: 1rem;
+    color: set-text-color($primary-color);
+}
+*/
+.main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+body {
+  background: hsl(217deg, 54%, 11%);
+  color: hsl(215deg, 51%, 70%);
+  height: 100vh;
+  font-family: "Outfit", sans-serif;
+  line-height: 1;
+  font-weight: 400;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+}
+
+.card {
+  height: auto;
+  width: 325px;
+  margin: 0 auto;
+  background-color: hsl(216deg, 50%, 16%);
+  padding: 20px;
+  border-radius: 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.card .nft-preview {
+  height: 285px;
+  width: 100%;
+  border-radius: 10px;
+  overflow: hidden;
+}
+.card .nft-preview__link {
+  display: block;
+  background: url("../img/image-equilibrium.jpg") center center;
+  background-size: cover;
+  /*&::after {
+      position: absolute;
+      opacity: 0;
+      left: 0;
+      height: 100%;
+      width: 100%;
+      content: '';
+      background: url('../img/icon-view.svg') center,
+      linear-gradient(
+          to right,
+          rgba($cyan, 0.3),
+          rgba($cyan, 0.3)
+      );
+      background-repeat: no-repeat;
+      &:hover {
+          opacity: 1;
+      }
+  }*/
+}
+.card .nft-preview__link:hover {
+  background: no-repeat url("../img/icon-view.svg") center, linear-gradient(to right, rgba(0, 255, 247, 0.3), rgba(0, 255, 247, 0.3)), center/cover url("../img/image-equilibrium.jpg");
+}
+.card .nft-preview__image {
+  width: 100%;
+}
+.card .title-link {
+  font-size: 18px;
+  letter-spacing: 1px;
+  color: hsl(0deg, 0%, 100%);
+  font-weight: 600;
+  text-decoration: none;
+  align-self: flex-start;
+  margin: 25px 0;
+}
+.card .body-copy {
+  font-weight: 300;
+  line-height: 1.5;
+  margin: 0;
+}
+.card .info-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  width: 100%;
+  justify-content: space-between;
+  margin: 25px 0;
+}
+.card .info-container .nft-price {
+  display: flex;
+  color: hsl(178deg, 100%, 50%);
+}
+.card .info-container .nft-price p {
+  font-weight: 600;
+  margin-left: 8px;
+}
+.card .info-container .time-left {
+  display: flex;
+}
+.card .info-container .time-left p {
+  margin-left: 8px;
+}
+.card .break-line {
+  height: 1px;
+  width: 100%;
+  background-color: hsl(215deg, 32%, 27%);
+  margin-bottom: 20px;
+}
+.card .author {
+  width: 100%;
+  margin-bottom: 8px;
+  letter-spacing: 0.5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  justify-content: flex-start;
+}
+.card .author__avatar {
+  height: 40px;
+  width: 40px;
+  border: 1.75px solid hsl(0deg, 0%, 100%);
+  border-radius: 35px;
+  margin-right: 20px;
+}
+.card .author__link {
+  text-decoration: none;
+  color: hsl(0deg, 0%, 100%);
+}/*# sourceMappingURL=style.css.map */
