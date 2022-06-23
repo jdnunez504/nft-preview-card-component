@@ -75,8 +75,9 @@ If you want more help with writing markdown, we'd recommend checking out [The Ma
 
 ### Useful resources
 
-- [Example resource 1](https://www.example.com) - This helped me for XYZ reason. I really liked this pattern and will use it going forward.
+- [MDN - Background](https://developer.mozilla.org/en-US/docs/Web/CSS/background)
 - [Pseudo-element Class/Selectors](https://blog.shimin.io/pseudo-class-and-pseudo-element-selectors/)
+- [CSS3 Image Overlay Effects Example](https://codeshack.io/css3-image-overlay-effects-example/)
 
 ## Author
 

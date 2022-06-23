@@ -169,39 +169,36 @@ body {
   flex-direction: column;
 }
 .card .nft-preview {
+  position: relative;
   height: 285px;
   width: 100%;
   border-radius: 10px;
   overflow: hidden;
 }
-.card .nft-preview__link {
-  display: block;
-  background: url("../img/image-equilibrium.jpg") center center;
-  background-size: cover;
-  /*&::after {
-      position: absolute;
-      opacity: 0;
-      left: 0;
-      height: 100%;
-      width: 100%;
-      content: '';
-      background: url('../img/icon-view.svg') center,
-      linear-gradient(
-          to right,
-          rgba($cyan, 0.3),
-          rgba($cyan, 0.3)
-      );
-      background-repeat: no-repeat;
-      &:hover {
-          opacity: 1;
-      }
-  }*/
-}
-.card .nft-preview__link:hover {
-  background: no-repeat url("../img/icon-view.svg") center, linear-gradient(to right, rgba(0, 255, 247, 0.3), rgba(0, 255, 247, 0.3)), center/cover url("../img/image-equilibrium.jpg");
-}
 .card .nft-preview__image {
+  height: 285px;
   width: 100%;
+}
+.card .nft-preview div {
+  display: flex;
+  position: absolute;
+  top: 0;
+  background-color: rgba(0, 255, 247, 0.3);
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  transition: all 0.2s ease-in;
+}
+.card .nft-preview:hover div {
+  opacity: 1;
+}
+.card .nft-preview__link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  width: 100%;
+  height: 100%;
 }
 .card .title-link {
   font-size: 18px;
@@ -211,6 +208,10 @@ body {
   text-decoration: none;
   align-self: flex-start;
   margin: 25px 0;
+  transition: all 0.5s;
+}
+.card .title-link:hover {
+  color: hsl(178deg, 100%, 50%);
 }
 .card .body-copy {
   font-weight: 300;
@@ -266,4 +267,8 @@ body {
 .card .author__link {
   text-decoration: none;
   color: hsl(0deg, 0%, 100%);
+  transition: all 0.5s;
+}
+.card .author__link:hover {
+  color: hsl(178deg, 100%, 50%);
 }/*# sourceMappingURL=style.css.map */
