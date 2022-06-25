@@ -4,138 +4,6 @@
   padding: 0;
 }
 
-/*
-$primary-color: #272727;
-$accent-color: #ff652f;
-$text-color: #fff;
-$font-weights: (
-    "regular": 400,
-    "medium": 500,
-    "bold": 700
-);
-$mobile: 800px;
-*/
-/*
-@function weight($weight-name) {
-    @return map-get($font-weights, $weight-name);
-}
-
-@mixin flexCenter($direction) {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: $direction;
-}
-
-@mixin theme($light-theme: true) {
-    @if $light-theme {
-        background: lighten($primary-color, 100%);
-        color: darken($text-color, 100%);
-    }
-}
-
-@mixin mobile {
-    @media (max-width: $mobile) {
-        @content;
-    }
-}
-
-body {
-    background: $primary-color;
-    color: $text-color;
-}
-
-.main {
-    @include flexCenter(row);
-    width: 80% - 40%;
-    margin: 0 auto;
-
-    __paragraph1 {
-        font-weight: weight(bold);
-        &:hover {
-            color: pink;
-        }
-    }
-
-    __paragraph2 {
-        @extend .main__paragraph1;
-        &:hover {
-            color: $accent-color;
-        }
-    }
-
-    @include mobile {
-        flex-direction: column;
-    }
-}
-
-.light {
-    @include theme($light-theme: true);
-}
-
-@import 'config';
-@import 'home';
-@import 'menu';
-@import 'about';
-@import 'projects';
-@import 'contact';
-@import 'responsive';
-
-body {
-    background: $primary-color;
-    color: set-text-color($primary-color);
-    height: 100vh;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    line-height: 1;
-}
-
-h1, h2, h3 {
-    font-weight: 400;
-}
-
-a {
-    color: set-text-color($primary-color);
-    text-decoration: none;
-}
-
-.text-secondary {
-    color: $secondary-color;
-}
-
-header {
-    position: fixed;
-    z-index: 2;
-    width: 100%;
-    padding: 1rem;
-}
-
-main {
-    height: 100%;
-    width: 100%;
-    .social-icons {
-        position: fixed;
-        bottom: 1rem;
-        left: 1rem;
-        a {
-            padding: 0.4rem;
-            @include transition-ease;
-            &:hover {
-                color: $secondary-color;
-            }
-        }
-    }
-}
-
-footer {
-    font-size: 1rem;
-    position: fixed;
-    bottom: 0.4rem;
-    right: 1rem;
-    text-align: right;
-    padding: 1rem;
-    color: set-text-color($primary-color);
-}
-*/
 .main {
   display: flex;
   justify-content: center;
@@ -161,23 +29,38 @@ body {
   width: 325px;
   margin: 0 auto;
   background-color: hsl(216deg, 50%, 16%);
-  padding: 20px;
+  padding: 24px;
   border-radius: 15px;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
 }
+@media (min-width: 50rem) {
+  .card {
+    width: 350px;
+  }
+}
 .card .nft-preview {
   position: relative;
-  height: 285px;
+  height: 277px;
   width: 100%;
   border-radius: 10px;
   overflow: hidden;
 }
+@media (min-width: 50rem) {
+  .card .nft-preview {
+    height: 302px;
+  }
+}
 .card .nft-preview__image {
-  height: 285px;
+  height: 277px;
   width: 100%;
+}
+@media (min-width: 50rem) {
+  .card .nft-preview__image {
+    height: 302px;
+  }
 }
 .card .nft-preview div {
   display: flex;
