@@ -46,10 +46,7 @@ Then crop/optimize/edit your image however you like, add it to your project, and
 - CSS custom properties
 - SCSS
 - Flexbox
-- CSS Grid
 - Mobile-first workflow
-
-**Note: These are just examples. Delete this note and replace the list above with your own choices**
 
 ### What I learned
 
@@ -71,8 +68,6 @@ const proudOfThisFunc = () => {
 }
 ```
 
-If you want more help with writing markdown, we'd recommend checking out [The Markdown Guide](https://www.markdownguide.org/) to learn more.
-
 ### Useful resources
 
 - [MDN - Background](https://developer.mozilla.org/en-US/docs/Web/CSS/background)
@@ -81,7 +76,5 @@ If you want more help with writing markdown, we'd recommend checking out [The Ma
 
 ## Author
 
-- Website - [Joaquin Nunez](https://www.your-site.com)
 - Frontend Mentor - [@jdnunez](https://www.frontendmentor.io/profile/yourusername)
-- Twitter - [@yourusername](https://www.twitter.com/yourusername)
 - Github - [jdnunez504](https://github.com/jdnunez504)
